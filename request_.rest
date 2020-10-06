@@ -1,0 +1,343 @@
+
+POST http://localhost:5000/api/register
+Content-Type: application/json
+
+{
+ "username" : "Jawhera@yahoo.fr",
+ "password" : "joujou96",
+  "address" : "",
+ "firstname" : "",
+ "mobile" : "",
+"lastname" : ""
+}
+###
+GET http://localhost:5000/api/
+
+###
+POST http://localhost:5000/api/login
+Content-Type: application/json
+
+{
+ "username" : "Jawhera@yahoo.fr",
+ "password" : "xxxxxx",
+
+}
+
+###
+PUT http://localhost:5000/api/registaprovider
+Content-Type: application/json
+
+{
+ "username" : "asslickingmann@yahoo.fr",
+ "provider_facebook" : "1",
+ "uniqueid" : "1236",
+ "firstname" : "hello",
+ "lastname" : "hellos"
+}
+
+###
+POST http://localhost:5000/api/loginProvider
+Content-Type: application/json
+
+{
+ "username" : "Jawhera@yahoo.fr",
+ "provider" : "facebook",
+ "idprovider" : "123"
+}
+
+###
+PUT http://localhost:5000/api/Dataupadte
+Content-Type: application/json
+
+{
+ "username" : "Jawhera@yahoo.fr",  
+ "firstname" : "jawher",
+ "lastname" : "gharbi",
+ "telenumber" : "+21652473240",
+ "address" : "03 cyphre rule"
+}
+
+###
+PUT  http://localhost:5000/api/Changepassword
+Content-Type: application/json
+
+{
+ "username": "Jawhera@yahoo.fr", 
+ "password" : "xxxxxx",
+ "passwordConfirmation" : "xxxxxx"
+}
+###
+
+POST http://localhost:5000/api/getUser
+Content-Type: application/json
+
+{
+    "username" : "Jawhera@yahoo.fr"
+}
+
+###
+POST http://localhost:5000/api/reset-password
+Content-Type: application/json
+
+{
+    "username" : "fox09121996@gmail.com"
+}
+
+
+###
+
+POST http://localhost:5000/api/annonces/add
+Content-Type: application/json
+
+{
+    "title" : "a la recherche de Benzino",
+    "username" : "Jawhera@yahoo.fr"
+}
+
+###
+
+POST http://localhost:5000/api/parts/add
+Content-Type: application/json
+
+{   
+"username" : "Jawhera@yahoo.fr",
+"name" : "name",
+"refrence" : "refrence",
+"Type" : "SE",
+"tag_description" : "tag_description",
+"other1" : "other1",
+"other2" : "other2",
+"other3" : "other3",
+"Auction" : "YES",
+"String_image" : ""
+}
+
+###
+
+GET http://localhost:5000/api/parts/getAuctions
+Content-Type: application/json 
+###
+GET http://localhost:5000/api/parts/getSells
+Content-Type: application/json
+
+###
+PUT http://localhost:5000/api/parts/addAuction
+Content-Type: application/json
+
+{
+ "idparts" : "18",
+ "Starting_Price" : "200",
+ "timer" : "0"
+}
+
+###
+PUT http://localhost:5000/api/parts/addSell
+Content-Type: application/json
+
+{
+ "idparts" : "27",
+ "price" : "200"
+}
+
+###
+GET http://localhost:5000/api/parts/getPartsIduser
+Content-Type: application/json
+
+{
+"username" : "Jawhera@yahoo.fr"
+}
+###
+DELETE http://localhost:5000/api/parts/deletePart
+Content-Type: application/json
+
+{
+"deleteId" : "16"
+}
+###
+PUT http://localhost:5000/api/parts/neutralizeParts
+Content-Type: application/json
+
+{
+ "idparts" : "15"
+}
+###
+PUT http://localhost:5000/api/parts/updatePart
+Content-Type: application/json
+
+{
+    "idparts" : "15",
+    "name" : "hellothere"
+}
+###
+PUT http://localhost:5000/api/parts/auctioning
+Content-Type: application/json
+
+{
+    "idparts" : "15",
+    "adding_price" : "700"
+}
+
+###
+PUT http://localhost:5000/api/parts/deadauction
+Content-Type: application/json
+
+{
+    "idparts" : "15"
+}
+
+###
+PUT http://localhost:5000/api/parts/deadSellable
+Content-Type: application/json
+
+{
+    "idparts" : "15"
+}
+
+###
+POST http://localhost:5000/api/parts/imagetest
+Content-Type: application/json
+
+{
+    "String_image" : ""
+
+}
+
+
+###
+POST http://localhost:5000/api/parts/myparts
+Content-Type: application/json
+
+{
+    "username" : "jawhergharbi@yahoo.fr"
+}
+
+###
+POST http://localhost:5000/api/parts/searchSell
+Content-Type: application/json
+
+{
+    "search" : "%a%"
+}
+
+###
+POST http://localhost:5000/api/parts/searchAuction
+Content-Type: application/json
+
+{
+    "search" : "%e%"
+}
+
+
+
+###
+POST http://localhost:5000/api/comments/getComments
+Content-Type: application/json
+
+{
+    "dealid" : "22"
+}
+
+###
+PUT http://localhost:5000/api/comments/UpdateVotes
+Content-Type: application/json
+
+{
+    "commentid" : "13",
+    "ref" : "down",
+    "username" : "fox09121996@gmail.com"
+}
+
+###
+POST  http://localhost:5000/api/comments/addComment
+Content-Type: application/json
+
+{
+   "text" : "Shinjuku ward east side... The center of the street with most chaos, There's a Kabukicho with full of neon lights. When the light is stronger, the shadow is deeper. The story begins when certain bizarre murder happens one night! Suspense? Or Comedy? Drama that cannot identify begins!",
+    "username" : "fox09121996@gmail.com",
+    "dealid" : "22"
+}
+###
+POST  http://localhost:5000/api/comments/checkVoter
+Content-Type: application/json
+
+{
+"dealid" : "22",    
+"username" : "Jawhera@yahoo.fr"
+}
+
+###
+PUT  http://localhost:5000/api/parts/UpdateVues
+Content-Type: application/json
+
+{
+ "idparts": "22"
+}
+
+###
+POST  http://localhost:5000/api/parts/getCatDeal
+Content-Type: application/json
+
+{
+ "key": "a"
+}
+
+###
+POST  http://localhost:5000/api/comments/Neutralize
+Content-Type: application/json
+
+{
+ "commentid" : "13",
+"username" : "jawhergharbi@yahoo.fr"
+}
+
+###
+POST  http://localhost:5000/api/comments/getUsernameandComments
+Content-Type: application/json
+
+{
+ "dealid" : "22",
+"username" : "jawhera@yahoo.fr"
+}
+
+###
+POST  http://localhost:5000/api/parts/getSellSorted
+Content-Type: application/json
+
+{
+ "key": "Price ASC"
+}
+
+
+###
+POST  http://localhost:5000/api/parts/getOneSellDeadParts
+Content-Type: application/json
+
+{
+ "idpart": "22"
+}
+
+###
+
+PUT  http://localhost:5000/api/updateUserF
+Content-Type: application/json
+
+{
+ "username": "Jawhera@yahoo.fr",
+ "lastname":"Werteni"
+}
+
+###
+POST  http://localhost:5000/api/parts/DeadParts
+Content-Type: application/json
+
+{
+ "idpart": "23"
+}
+
+
+
+
+
+
+
+
